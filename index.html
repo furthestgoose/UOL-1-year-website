@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- this links the html page to the css page-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--this links the icon library for the hamburger menu-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- I think this sets the viewport size to the same dimensions as the screen dimensions???-->
+    <script>
+      //navbar code taken from my btec project, btec project code can be shown on request if neccessary
+        function navbar() {
+        
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+          // toggles adding the responsive class to topnav when the user clicks the icon
+        }
+      }
+    </script>
+    <title>TechCon2023</title>
+    <!--sets the title for the webpage that will appear in the tab-->
+        
+    <link rel="icon" type="image/x-icon" href="images/logo.jpeg">
+    <!--sets a favicon for the page-->
+  </head>
+  <body>
+
+    <div class="topnav" id="myTopnav">
+        <!--Class declared for navigation and links declared below-->
+      <div class="navtext">
+        <a href="index.html" class="active">Home</a>
+        <a href="register.html">Register</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="contact_us.html">Contact us</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="navbar()">
+        <i class="fa fa-bars"></i>
+        <!--Calls the specific icon for the hamburger menu from the icon library-->
+      </a>
+    </div>
+    <!--parallax methods learnt from :https://www.w3schools.com/howto/howto_css_parallax.asp-->
+    <div class="ParallaxVideo">
+      <!--this class enables the parallax effect for the background video-->
+      <video autoplay muted loop>
+        <!-- this sets the video to automatically play on a loop and be muted-->
+        <source src="images/broll.mp4" type="video/mp4">
+        <!-- this sets the source for the background video-->
+      </video>
+      <h1>Tech Con 2023</h1>
+      <h4>Showcasing the latest technology</h4>
+      <!-- the code above sets a heading for the video that will be displayed on top of it-->
+      <button class="register_button" onclick=location.href="register.html" type="button">Register Now!</button>
+      <!-- idk why the equals here is red but it still works, the code above declares a class and redirect location as well as the text for the register button-->
+    </div>
+    
+    <div class="box1">
+      <h3>About Us</h3>
+      <p>We are Tech Con 2023, the premier technology convention of the year! Join us at the Las Vegas Convention Center from June 12th to June 15th, 2023, for an unforgettable experience.
+         Tech Con 2023 is the perfect opportunity for tech enthusiasts to learn about the latest trends and innovations in the tech industry.
+          Our three-day event will feature keynote speakers, panel discussions, and workshops, all designed to help you stay ahead of the curve.
+          You’ll have the opportunity to network with other tech enthusiasts and industry professionals, and explore the latest products and services in our exhibition hall.
+          The Las Vegas Convention Center is a state-of-the-art facility that is well-equipped to host large-scale events like Tech Con 2023. Located in the heart of Las Vegas, it is easily accessible by public transportation.
+          Don’t miss out on this exciting event that will bring together the best and brightest minds in the tech industry. Register now and join us for an unforgettable experience!
+        </p>
+        <!-- the code above sets the text and styling for the first information box for the page-->
+    </div>
+    
+    <div class="bgimg-2">
+      <!-- this sets the class for the second parallax background to allow tweaking within the css-->
+      <span class="caption" >Innovate, Inspire, Ignite!</span>
+      <!-- this sets the slogan styling and slogan itself that will span over the second parallax image-->
+    </div>
+    
+    <div class="box2">
+      <h3>Featuring</h3>
+      <p>Tech Con 2023 is proud to feature some of the most innovative and exciting companies in the tech industry.
+          Our exhibition hall will showcase the latest products and services from companies like Microsoft, Apple, Google, and many more.
+          You’ll have the opportunity to interact with representatives from these companies and learn about their latest offerings.
+          In addition to our exhibition hall, we’ll also be featuring a number of exciting workshops and panel discussions.
+          These sessions will cover a wide range of topics, from artificial intelligence to blockchain to cybersecurity.
+          Our keynote speakers are some of the most respected names in the tech industry, and they’ll be sharing their insights and expertise with you.
+          Don’t miss out on this incredible opportunity to learn from the best and brightest minds in the tech industry.</p>
+          <!-- this sets the class and text for the second information box for the page-->
+    </div>
+    
+    <div class="bgimg-3">
+      <!-- this sets the class for the third background image to allow tweaking within the css-->
+      <span class="caption" >Experience the future of tech today!</span>
+      <!-- this sets the slogan styling and slogan itself that will span over the third parallax image-->
+    </div>
+
+    <div class="box2">
+      <!--this sets the class for the styling of the box the footer resides in-->
+      <p class="footertext">
+      <!-- this sets a class for the footer text to allow for easier styling-->
+      <a href="#top" class="backtotop">Back to top of page</a><br><br>
+      <!-- this inserts the back to the the top text in the footer as well as setting a class and destination the #top sends you to the top of the page-->
+      &copy; Tech Con 2023 <br>
+      <!-- &copy inserts a copyright symbol-->
+      all rights reserved<br></p>
+      <!--this is the standard footer code that is used throughout this website-->
+    </div>
+    
+    
+    
+  </body>
+</html>

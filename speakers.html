@@ -1,0 +1,214 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- this links the html page to the css page-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--this links the icon library for the hamburger menu-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- this sets the viewport to be the same size as the device screen-->
+    <script>
+        function navbar() {
+        
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+          // toggles adding the responsive class to topnav when the user clicks the icon
+        }
+      }
+    </script>
+    <title>TechCon2023 Speakers</title>
+    <!--sets the title for the webpage that will appear in the tab-->
+        
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+    <!--this sets the favicon for the webpage-->
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <!--Class declared for navigation and links declared below-->
+      <div class="navtext">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="speakers.html" class="active">Speakers</a>
+        <a href="contact_us.html">Contact us</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="navbar()">
+        <i class="fa fa-bars"></i>
+        <!--Calls the specific icon for the hamburger menu from the icon library-->
+      </a>
+    </div>
+
+    <div class="parallaxcontainer">
+      <!--sets the parallax container element which contains styling required to cause the parallax effect-->
+      <div class="speakersbg"></div>
+      <!-- sets the background image of the top header-->
+    </div>
+    <div class="content_box">
+        <!--this sets the grey box that is below the parallax header-->
+        <h3>Speakers</h3>
+        <div class="speakerssubbox">
+            <!-- this sets the lighter grey box that the speaker cards are encapsulated in-->
+            <div class="row">
+                <!-- purpose is explained in the css file-->
+                <div class="column">
+                    <!--cards made using a combination of these 3 guides:-->
+                    <!--for positioning: https://www.w3schools.com/howto/howto_js_expanding_grid.asp-->
+                    <!--for the card: https://www.w3schools.com/howto/howto_css_profile_card.asp-->
+                    <!--for the expanding content: https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+                    <!--this sets a structure which floats the 4 cards side by side-->
+                  <div class="card">
+                    <!-- sets the card to appear-->
+                    <img src="images/tim.jpeg" alt="Tim" class="card_images">
+                    <!--sets the image to appear at the top of the card-->
+                    <h1>Tim Cook</h1>
+                    <p class="title">CEO of Apple, Former COO of Apple</p>
+                    <p>The Fuqua school of business</p>
+                    <!--the text above gives the user basic information about the speaker-->
+                    <div class="socials_container">
+                    <a class="socials" href="#"><i class="fa fa-dribbble"></i></a> 
+                    <a class="socials"  href="#"><i class="fa fa-twitter"></i></a>  
+                    <a class="socials" href="#"><i class="fa fa-linkedin"></i></a>  
+                    <a class="socials" href="#"><i class="fa fa-facebook"></i></a> 
+                    </div>
+                    <!--the code above displays the social media icons on the speaker card-->
+                    <p><button class="speakers_button">Contact</button></p>
+                    <!-- this code set the contact button on the speakers profile-->
+                  </div>
+                  <div class="content">
+                    <h3>More</h3>
+                    <p>Tim Cook is an American business executive who is the CEO of Apple Inc since 2011.
+                        He succeeded Steve Jobs as the CEO of Apple and has led the company’s growth, innovation, and social impact.
+                        Cook is also known for his advocacy of environmental and social causes.
+                    </p>
+                    <!-- the code above sets the content that will appear below the card when it is clicked on-->
+                  </div>
+                </div>
+              
+                <div class="column">
+                    <div class="card">
+                    <!-- sets the card to appear-->
+                      <img src="images/mark.jpeg" alt="Mark" class="card_images">
+                      <!--sets the image to appear at the top of the card-->
+                      <h1>Mark Zuckerburg</h1>
+                      <p class="title">Founder and CEO of Meta (Formerly known as Facebook)</p>
+                      <p>Harvard University</p>
+                      <!--the text above gives the user basic information about the speaker-->
+                      <div class="socials_container">
+                      <a class="socials" href="#"><i class="fa fa-dribbble"></i></a> 
+                      <a class="socials"  href="#"><i class="fa fa-twitter"></i></a>  
+                      <a class="socials" href="#"><i class="fa fa-linkedin"></i></a>  
+                      <a class="socials" href="#"><i class="fa fa-facebook"></i></a> 
+                      </div>
+                      <!--the code above displays the social media icons on the speaker card-->
+                      <p><button class="speakers_button">Contact</button></p>
+                      <!-- this code set the contact button on the speakers profile-->
+                    </div>
+                    <div class="content">
+                      <h3>More</h3>
+                      <p>Mark Zuckerberg is an American business magnate, computer programmer, internet entrepreneur, and philanthropist. He is the co-founder, executive chairman, and CEO of Meta Platforms (formerly Facebook, Inc.) .
+                        Zuckerberg attended Harvard University, where he launched Facebook in February 2004 with his roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes .
+                        He has since used his funds to organize multiple philanthropic endeavors, including the establishment of the Chan Zuckerberg Initiative .
+                      </p>
+                      <!-- the code above sets the content that will appear below the card when it is clicked on-->
+                    </div>
+                  </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <!-- sets the card to appear-->
+                    <img src="images/jeff.jpeg" alt="Jeff" class="card_images">
+                    <!--sets the image to appear at the top of the card-->
+                    <h1>Jeff Bezos</h1>
+                    <p class="title">CEO of Amazon and CEO of BlueOrigin</p>
+                    <p>Princeton University</p>
+                    <!--the text above gives the user basic information about the speaker-->
+                    <div class="socials_container">
+                    <a class="socials" href="#"><i class="fa fa-dribbble"></i></a> 
+                    <a class="socials"  href="#"><i class="fa fa-twitter"></i></a>  
+                    <a class="socials" href="#"><i class="fa fa-linkedin"></i></a>  
+                    <a class="socials" href="#"><i class="fa fa-facebook"></i></a> 
+                    </div>
+                    <!--the code above displays the social media icons on the speaker card-->
+                    <p><button class="speakers_button">Contact</button></p>
+                    <!-- this code set the contact button on the speakers profile-->
+                  </div>
+                  <div class="content">
+                    <h3>More</h3>
+                    <p>Jeff Bezos is an American entrepreneur, media proprietor and investor. He is the founder, executive chairman, and former president and CEO of Amazon, the world’s largest e-commerce and cloud computing company.
+                        He is also the founder of Blue Origin, a spaceflight company, and the co-founder of Bezos Expeditions, a venture capital firm.
+                        Bezos graduated from Princeton University in 1986 with degrees in electrical engineering and computer science.
+                    </p>
+                    <!-- the code above sets the content that will appear below the card when it is clicked on-->
+                  </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                    <!-- sets the card to appear-->
+                      <img src="images/bill.jpeg" alt="Bill" class="card_images">
+                      <!--sets the image to appear at the top of the card-->
+                      <h1>Bill Gates</h1>
+                      <p class="title">Founder of Microsoft and several others</p>
+                      <p>Harvard University</p>
+                      <!--the text above gives the user basic information about the speaker-->
+                      <div class="socials_container">
+                      <a class="socials" href="#"><i class="fa fa-dribbble"></i></a> 
+                      <a class="socials"  href="#"><i class="fa fa-twitter"></i></a>  
+                      <a class="socials" href="#"><i class="fa fa-linkedin"></i></a>  
+                      <a class="socials" href="#"><i class="fa fa-facebook"></i></a> 
+                      </div>
+                      <!--the code above displays the social media icons on the speaker card-->
+                      <p><button class="speakers_button">Contact</button></p>
+                      <!-- this code set the contact button on the speakers profile-->
+                    </div>
+                    <div class="content">
+                      <h3>More</h3>
+                      <p>Bill Gates is an American entrepreneur, software developer, and philanthropist. He is the co-founder of Microsoft, the world’s largest personal-computer software company.
+                        Gates has also been involved in various philanthropic activities through the Bill & Melinda Gates Foundation, which he co-founded with his wife Melinda Gates.
+                        Gates has been awarded numerous honors for his philanthropic work and contributions to the field of technology.
+                      </p>
+                      <!-- the code above sets the content that will appear below the card when it is clicked on-->
+                    </div>
+                  </div>
+
+              </div> 
+        </div>
+    </div>
+    
+    <div class="box2">
+    <!--this sets the class for the styling of the box the footer resides in-->
+      <p class="footertext">
+      <!-- this sets a class for the footer text to allow for easier styling-->
+      <a href="#top" class="backtotop">Back to top of page</a><br><br>
+      <!-- this inserts the back to the the top text in the footer as well as setting a class and destination the #top sends you to the top of the page-->
+      &copy; Tech Con 2023 <br>
+      <!-- &copy inserts a copyright symbol-->
+      all rights reserved<br></p>
+      <!--this is the standard footer code that is used throughout this website-->
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("card");
+        // sets the variable coll to = all elements with the name "card"
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            // the code selects all elements with the card name and adds an onclick listening to them
+            this.classList.toggle("active");
+            // sets the card that was clicked on to active
+            var content = this.nextElementSibling;
+            // content = the sibling element of card i.e. the content that is being expanded
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+              // if the content is already expanded it is folded back in
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              // if the content is not already expanded it is folded out
+            } 
+          });
+        }
+        </script>
+  </body>
+</html>

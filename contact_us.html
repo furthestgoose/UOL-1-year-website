@@ -1,0 +1,309 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- this links the html page to the css page-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--this links the icon library for the hamburger menu-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- this sets the viewport to be the same size as the device screen-->
+    <script>
+      function navbar() {
+        
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+          // toggles adding the responsive class to topnav when the user clicks the icon
+        }
+      }
+      function validateForm() {
+        // this sets a function with the name validateForm
+        let fname = document.forms["register_form"]["fname"].value;
+        let lname = document.forms["register_form"]["lname"].value;
+        let email = document.forms["register_form"]["email"].value;
+        let phone = document.forms["register_form"]["phone number"].value;
+        // the code above assigns a varaiable to each input box on the form
+
+        switch (true){
+        // a switch statement was used here instead of an if else tree, this is because of the fact that not only are switch statements more readable than if else trees they are also more performant due to their use of jump tables
+          case fname == "":
+            document.getElementsByName('fname')[0].placeholder='must be filled out';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            // this stops the form from being submitted
+            break;
+            // this breaks out of the switch statement and stops it from flowing into the next case
+
+          case fname.length < 2:
+            document.getElementsByName('fname')[0].value='';
+            document.getElementsByName('fname')[0].placeholder='first name cannot be < 2';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input is < 2 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case fname.length > 15:
+            document.getElementsByName('fname')[0].value='';
+            document.getElementsByName('fname')[0].placeholder='cannot be > 15';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input is < 15 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case /\d/.test(fname):
+            document.getElementsByName('fname')[0].value='';
+            document.getElementsByName('fname')[0].placeholder='cannot contain numbers';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input contains a number and if it does it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case lname == "":
+            document.getElementsByName('lname')[0].placeholder='last name must be filled out';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the last name input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case /\d/.test(lname):
+            document.getElementsByName('lname')[0].value='';
+            document.getElementsByName('lname')[0].placeholder='cannot contain numbers';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the last name input contains a number and if it does it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+
+          case lname.length < 5:
+            document.getElementsByName('lname')[0].value='';
+            document.getElementsByName('lname')[0].placeholder='cannot be < 5';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the first name input is < 5 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case lname.length > 20:
+            document.getElementsByName('lname')[0].value='';
+            document.getElementsByName('lname')[0].placeholder='cannot be < 20';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the first name input is > 20 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+    
+          case email == "":
+            document.getElementsByName('email')[0].placeholder='must be filled out';
+            document.getElementById("email").style.borderColor = "red";
+            document.getElementById("email").style.borderWidth = "thin";
+            // the code above checks if the email input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case !email.includes('@'):
+            document.getElementsByName('email')[0].value='';
+            document.getElementsByName('email')[0].placeholder='must include an @';
+            document.getElementById("email").style.borderColor = "red";
+            document.getElementById("email").style.borderWidth = "thin";
+            // the code above checks to make sure that the email input doesn't contain an @ and if it does it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;   
+
+          case phone == "":
+            document.getElementsByName('phone number')[0].value='';
+            document.getElementsByName('phone number')[0].placeholder='must be filled out';
+            document.getElementById("phone number").style.borderColor = "red";
+            document.getElementById("phone number").style.borderWidth = "thin";
+            // the code above checks if the phone number input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case phone.length < 10 || phone.length > 10:
+            document.getElementsByName('phone number')[0].value='';
+            document.getElementsByName('phone number')[0].placeholder='must be 10 numbers long';
+            document.getElementById("phone number").style.borderColor = "red";
+            document.getElementById("phone number").style.borderWidth = "thin";
+            // the code above checks if the phone number input is exactly 11 digits long  and if it isn't it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+        }
+      }
+    </script>
+    <title>TechCon2023 Contact page</title>
+    <!--sets the title for the webpage that will appear in the tab-->
+        
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+    <!--this sets the favicon of the page-->
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <!--Class declared for navigation and links declared below-->
+      <div class="navtext">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="contact_us.html" class="active">Contact us</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="navbar()">
+        <i class="fa fa-bars"></i>
+        <!--Calls the specific icon for the hamburger menu from the icon library-->
+      </a>
+    </div>
+
+    <div class="parallaxcontainer">
+      <!--sets the parallax container element which contains styling required to cause the parallax effect-->
+      <div class="contact_bg"></div>
+      <!-- sets the background image of the top header-->
+    </div>
+
+    <div class="content_box">
+      <!--this sets the class for the box below the parallax image for styling purposes-->
+      <div class="contact_box1">
+        <h3>Support:</h3>
+        <p>Email: intlprog@sbcglobal.net</p>
+        <p>Phone: +12623689458</p>
+        <h1>Contact Form</h1>
+        <form name="register_form" onsubmit="return validateForm()" >
+          <!--this names the form and returns the result of the function validateForm() when the submit button is pressed-->
+          <br><label class = "label" for="fname">First name<sup>*</sup></label><br><br>
+          <input type="text" name="fname" id="fname" class="inputbox"><br><br>
+          <!-- this sets a label and input for the first name input on the form-->
+          <label for="lname" class = "label">Last name<sup>*</sup></label><br><br>
+          <input type="text" name="lname" id="lname" class="inputbox"><br><br>
+          <!-- this sets a label and input for the last name input on the form-->
+          <label for="email" class = "label">Email<sup>*</sup></label><br><br>
+          <input type="text" name="email" id="email" class="inputbox"><br><br>
+          <!--instead of the email type we are using text here instead since we are using javascript validation over automatic browser verification -->
+          <label for="phone number" class = "label">Phone Number<sup>*</sup></label><br><br>
+          <input type="number" name="phone number" id="phone number" class="inputbox"><br><br>
+          <!-- instead of the tel type we are using number here since we are not using automatic browser based validation-->
+          <input type="submit" value="Submit" class="submitbox">
+          <!-- this sets a submit button for the form to appear on the page-->
+        </form>
+      </div>
+      <div class="contact_box2">
+        <!-- this sets the class for the grey box containing the map for styling purposes-->
+        <iframe class ="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.5584775552616!2d-115.15411752359906!3d36.12861300526769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c46640af22e7%3A0xa93a4afe2fe7b046!2sLas%20Vegas%20Convention%20Center%2C%20South%20Hall!5e0!3m2!1sen!2suk!4v1700766156395!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!--This imports the map from google maps for display on the second gray box-->
+      </div>
+      <div class="contact_box3">
+        <!--this sets the class for the grey box containing the chat bot for styling purposes-->
+        <!--chatbot front end learnt from this guide: https://javascript.plainenglish.io/basic-chatbot-using-html-css-and-javascript-f534e202befd-->
+        <!-- chatbot back end uses this library: https://huggingface.co/docs/transformers.js/index-->
+        <div id="chatbot">
+          <!--this is the class which sets the overall styling for the chatbot container-->
+          <div id="conversation">
+            <!--This sets the class which sets the  background for the chatbot box-->
+            <div class="chatbot-message">
+              <!-- this sets the class for the chatbot messages for styling purposes-->
+              <p class="chatbot-text">Hi! it's great to see you!(first response may take a bit to load while model loads)</p>
+              <!--this sets the text for the intial message-->
+            </div>
+          </div>
+        <form id="input-form">
+          <!--This sets the class which sets the styling for the user input box-->
+          <message-container>
+            <input id="input-field" type="text" placeholder="Type your message here">
+              <button id="submit-button" type="submit">
+                <img class="send-icon" src="images/sendmessage.png" alt="">
+              </button>
+              <!-- this sets the class which sets the styling for the input button-->
+          </message-container>
+        </form>
+        <!-- this sets the styling for the chatbot box-->
+      </div>
+    </div>
+    </div>
+    
+    <div class="box2">
+    <!--this sets the class for the styling of the box the footer resides in-->
+      <p class="footertext">
+      <!-- this sets a class for the footer text to allow for easier styling-->
+      <a href="#top" class="backtotop">Back to top of page</a><br><br>
+      <!-- this inserts the back to the the top text in the footer as well as setting a class and destination the #top sends you to the top of the page-->
+      &copy; Tech Con 2023 <br>
+      <!-- &copy inserts a copyright symbol-->
+      all rights reserved<br></p>
+      <!--this is the standard footer code that is used throughout this website-->
+    </div>
+
+    <script type="module">
+      // the type needs to be set to module to allow the importation of the transformers library
+      import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.9.0';
+      // this imports the pipeline and env properties from the transformers library
+      env.allowRemoteModels;
+      // this allows remote models to be run 
+      env.allowLocalModels=false;
+      // this disables the check for local models
+ 
+      const chatbot = document.getElementById('chatbot');
+      const conversation = document.getElementById('conversation');
+      const inputForm = document.getElementById('input-form');
+      const inputField = document.getElementById('input-field');
+      // this assigns a variable to several elements in the chatbot frontend
+
+      inputForm.addEventListener('submit', async function(event) {
+      // this adds the event listener to the input form and it listens for the message being sent, the async property is required for the await attribute to work
+        event.preventDefault();
+        // this stops the submit event from executing it's default action
+
+        const input = inputField.value;
+        // this assigns the user input to a variable
+
+        inputField.value = '';
+        // this clears the input field
+        const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
+        // this takes the current time and assigns it to a variable
+
+        let message = document.createElement('div');
+        // this creates a new div
+        message.classList.add('chatbot-message', 'user-message');
+        // this adds the user message to the message class
+        message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${input}</p>`;
+        // this adds the current time to the top of the message and sets the value of the message to the users input
+        conversation.appendChild(message);
+        //this appends and adds the new message to the conversation
+
+        let answerer = await pipeline('question-answering', 'Xenova/distilbert-base-uncased-distilled-squad');
+        // this loads the LLM model into the users computers cache, the model used can be found here "https://huggingface.co/Xenova/distilbert-base-uncased-distilled-squad"
+        let context = 'Tech con 2023 is a technology conference in the year 2023, it will be taking place in the las Vegas convention centre south hall from June 12th to June 15th 2023. It will feature keynote speakers, panel discussions and workshops on modern technology topics such as AI, UI/UX, software engineering and data science.Tech Con 2023 is the perfect place to meet not only other tech enthusiasts but also industry professionals as well as exploring the latest products and services which will be on display in the exhibition hall.Companies in attendance includes apple, Microsoft, google, IBM and many more.By registering to tech con 2023 you gain access to all of these opportunities.There are several ways to get to the convention centre including: Las Vegas Monorail: The Las Vegas Monorail is an efficient, easy, and quick way to get to the Las Vegas Convention Center. Monorail trains arrive every 4-5 minutes during large conventions and take a maximum of 10 minutes to reach the convention center from any part of the line. There are 9 separate trains running on the monorail, with each train allowing for a total capacity of 222 travelers. During citywide trade shows and conventions, the Monorail carries approximately 67,000 passengers—the staggering equivalent of 22,334 taxi cab rides. The Monorail connects the Las Vegas Convention Center to the following stations: MGM Grand, Horseshoe/Paris, Flamingo/Caesars Palace, Harrah’s/The LINQ, Boingo Station at Las Vegas Convention Center, Westgate Las Vegas Hotel & Casino, and SAHARA Las Vegas. You can purchase an unlimited ride pass to travel at liberty during your convention stay. Day passes offer the greatest value and are ideal for lunch breaks or exploring the Strip during your free time.Tech con 2023 is not a scam. We need your card details to commit tax fraud. The schedule for tech con 2023 is: June 12th	9:00 AM - 10:00 AM	Registration,June 12th	10:00 AM - 11:00 AM	Keynote Speech,June 12th	11:00 AM - 12:00 PM	Panel Discussion: “The Future of Technology”,June 12th	12:00 PM - 1:00 PM	Lunch Break,June 12th	1:00 PM - 2:00 PM	Workshop: “Artificial Intelligence and Machine Learning”,June 12th	2:00 PM - 3:00 PM	Workshop: “Blockchain and Cryptocurrency”,June 12th	3:00 PM - 4:00 PM	Networking Session,June 13th	9:00 AM - 10:00 AM	Registration,June 13th	10:00 AM - 11:00 AM	Keynote Speech,June 13th	11:00 AM - 12:00 PM	Panel Discussion: “The Future of Cybersecurity”,June 13th	12:00 PM - 1:00 PM	Lunch Break,June 13th	1:00 PM - 2:00 PM	Workshop: “Internet of Things (IoT)”,June 13th	2:00 PM - 3:00 PM	Workshop: “Virtual and Augmented Reality”,June 13th	3:00 PM - 4:00 PM	Networking Session,June 14th	9:00 AM - 10:00 AM	Registration,June 14th	10:00 AM - 11:00 AM	Keynote Speech,June 14th	11:00 AM - 12:00 PM	Panel Discussion: “The Future of Cloud Computing”,June 14th	12:00 PM - 1:00 PM	Lunch Break,June 14th	1:00 PM - 2:00 PM	Workshop: “Big Data and Analytics”,June 14th	2:00 PM - 3:00 PM	Workshop: “Cybersecurity Best Practices”,June 14th	3:00 PM - 4:00 PM	Networking Session,June 15th	9:00 AM - 10:00 AM	Registration,June 15th	10:00 AM - 11:00 AM	Keynote Speech,June 15th	11:00 AM - 12:00 PM	Panel Discussion: “The Future of Robotics”,June 15th	12:00 PM - 1:00 PM	Lunch Break,June 15th	1:00 PM - 2:00 PM	Workshop: “Quantum Computing”,June 15th	2:00 PM - 3:00 PM	Workshop: “5G and Beyond”,June 15th	3:00 PM - 4:00 PM	Networking Session';
+        // this sets the context for the LLM (the information it will draw from to answer the question)
+        let response = await answerer(input, context);
+        // this sets the variable response to the LLMs output when fed the user input and the context variable
+        console.log('Responses:', response);
+        // the LLM response is sent to the console
+
+
+        if (Object.values(response)[0] == ''){
+          // as the LLM responds with an object and the text response is the first element this code checks the text response of the element to see if it is empty
+          message = document.createElement('div');
+          message.classList.add('chatbot-message', 'chatbot');
+          message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${"Sorry I'm unable to answer this"}</p>`;
+          conversation.appendChild(message);
+          // the code above adds a new message to the conversation with the text "I'm unable to answer this"
+          message.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'})
+          // the code above sets the message to smoothly scroll into view
+        }
+        else{
+          // if the LLM response is not empty then the below code executes
+        message = document.createElement('div');
+        message.classList.add('chatbot-message', 'chatbot');
+        message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${Object.values(response)[0]}</p>`;
+        conversation.appendChild(message);
+        // the code above adds a new message to the conversation with the chatbot response
+        message.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+        // the code above sets the message to smoothly scroll into view
+        }
+      });
+    </script>
+  </body>
+</html>

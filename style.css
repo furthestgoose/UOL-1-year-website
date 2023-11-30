@@ -1,0 +1,707 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8, sans-serif;
+    color: #777;
+    /*this sets the styling for the document overall*/
+  }
+  .topnav {
+    text-align: center;
+    overflow: hidden;
+    font-family: sans-serif;
+    background:transparent;
+    /*sets the background of the navigation bar to white and sets the font*/
+  }
+  .navtext{
+    display: inline-block;
+    /* this is required to centre the navbar text */
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    transition: all 0.3s ease-in-out 0.2s;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /* sets the navbar display, the colour of the text and the font size */
+  }
+  
+  .topnav a:hover {
+    color: lightblue;
+    transition: all 0.3s ease-in-out 0.2s;
+    transform: scale(1.3);
+    /* this sets the color of the text on the navbar when the cursor hovers over it and sets a zoom animation on hover */
+  }
+  .topnav a.active {
+    color: lightblue;
+    border-bottom: 3px solid lightblue;
+    /* this sets the text of the active link to blue on the navbar*/
+  }
+  .topnav .icon {
+    top: 0;
+    right: 0;
+    display: none;
+    /* this hides the hamburger menu icon */
+  }
+  .topnav .icon:hover{
+      color:lightblue;
+      /* this sets the hamburger icon to white on cursor hover */
+  }
+  .ParallaxVideo{ 
+    height: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    /* this sets the dimensions for the parallax video container */
+  }
+  .parallaxcontainer{
+    height: 25%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    /*this gives the static heading images used for every page other than the home page the parallax effect */
+  }
+  .ParallaxVideo video{ 
+    min-width: 100%;
+    position: fixed;
+    height: 100%;
+    top:0;
+    z-index: -999;
+    /* this sets the positioning for the parallax video */
+  }  
+  .ParallaxVideo h1 {
+    color: #fff;
+    font-size: 76px;
+    font-weight: 300;
+    padding-top: 450px;
+    font-family: sans-serif;
+    text-align: center;
+    /* this sets the font colour and styling for the main title overlaid on the parallax video*/
+  }
+  .ParallaxVideo h4{
+    margin-top: -30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 30;
+    font-family: sans-serif;
+    text-align: center;
+    /* this sets the font colour and styling for the subtitle overlaid on the parallax video*/
+  }
+  .register_button{
+    transition: all 0.3s ease-in-out 0.2s; 
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 50px;
+    font-weight: 30;
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 400px;
+    height: 70px;
+    margin: auto;
+    display: block;
+    /* this sets the styling for the register button which is displayed on top of the parallax video*/
+  
+  }
+  
+  .register_button:hover{
+    transition: all 0.3s ease-in-out 0.2s;
+    transform: scale(1.2);
+    background-color: skyblue;
+    /* this sets the styling of the register button when it is hovered over, it zooms and changes background colour here */
+
+  }
+  .box1{
+    color: #777;
+    background-color:white;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+    /* this sets the styling of the first informatics box on the home page */
+  }
+  .box1 h3{
+    text-align:center;
+    font-family: sans-serif;
+    /* this sets the styling of the title for the first informatics box */
+  }
+  
+  .bgimg-2 {
+    background-image: url("images/techcon.jpg");
+    min-height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* this sets the source and height of the image used for the second parallax image on the home page as well as the positioning relative to the text*/
+  }
+  .box2{
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+    /* this sets the styling for the second informatics box */
+  }
+  .box2 h3{
+    text-align: center;
+    color:white;
+    font-family: sans-serif;
+    /* this sets the styling for the second informatics box title */
+  }
+  
+  .bgimg-3 {
+    background-image: url("images/booth3.jpeg");
+    min-height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* this sets the source and height of the image used for the third parallax image on the home page as well as the positioning relative to the text*/
+  }
+  
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    background-color:transparent;
+    font-size:45px;
+    font-family: sans-serif;
+    color: #f7f7f7;
+    /* this sets the styling of the slogans that span accross both of the parallax images*/
+  }
+  
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px sans-serif;
+    color: #111;
+    /* this sets the styling of the h3 element that is used throughout the entire website and gives it the spaced letter effect to keep it on theme*/
+  }
+
+  
+  
+  .backtotop{
+    font-family: sans-serif;
+    color: white;
+    text-decoration: underline;
+    /* this sets the styling of the link that takes you back to the top of the page found in the footer of every page */
+  }
+  .backtotop:hover{
+    color: lightskyblue;
+    /* this sets the styling of the back to the top link to change to blue when it is hovered over */
+  }
+  .footertext{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    /* this sets the styling of the text contained within the footer */
+  }
+
+  .register_bg{
+    background-image: url("images/register_image3.jpeg");
+    min-width: 100%;
+    position: fixed;
+    height: 100%;
+    top:0;
+    z-index: -999;
+    /* this sets the styling for the register header image as well as the positioning and source for the image */
+  }
+  .content_box{
+    color:#ddd;
+    background-color:#282E34;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+    height: 1000px;
+    /* this sets the styling for the grey box below the header image that contains all of the content, it is used numerous times in this website */
+  }
+  .content_box h3{
+    text-align: center;
+    color:white;
+    font-family: sans-serif;
+    /* this sets the styling for the title at the top of the content box to be centred, contrasted against the background and the correct font */
+  }
+  .form_container{
+    text-align: center;
+    /* this is needed to align the form to the centre as it would not do it if it wasn't inside a div with this styling */
+  }
+  .register_form{
+    margin: 0 auto; 
+    width:250px;
+    font-family: sans-serif;
+    color: black;
+    font-size: 20px;
+    /* this sets the styling and positioning for the register form*/
+  }
+  .checkbox{
+    font-size: 15px;
+    /* this changes the font size of the checkbox text since it is too large otherwise*/
+  }
+  .inputbox{
+    width: 300px;
+    height: 50px;
+    /* this sets the width and height of the boxes the user inputs their answer to the form into */
+  }
+  .submitbox{
+    width: 300px;
+    height: 50px;
+    color: black;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out 0.2s;
+    /* this sets the style of the submit button */
+  }
+  .submitbox:hover{
+    background-color: skyblue;
+    transition: all 0.3s ease-in-out 0.2s;
+    transform: scale(1.2);
+    /* this sets the style of the submit button on hover by increasing the scale of the button by 1.2 on hover and changing the background colour */
+  }
+  .label{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    /* this sets the styling of the labels above the input boxes for the form */
+  }
+  .schedule_bg{
+    background-image: url("images/schedule.jpg");
+    min-width: 100%;
+    position: fixed;
+    height: 100%;
+    top:0;
+    z-index: -999;
+    object-fit: fill;
+    /* this sets the styling and the source for the header image on the schedule page */
+  }
+
+  .tab {
+    overflow: hidden;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    /* this styles the box the tabs are contained within */
+  }
+  
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: sans-serif;
+    transition: all 0.3s ease-in-out 0.2s;
+    /* this styles the tab buttons */
+  }
+  
+  .tab button:hover {
+    transition: all 0.3s ease-in-out 0.2s;
+    transform: scale(1.2);
+    color: skyblue;
+    /*this changes the color of the tab buttons and scales them up by 1.2 when they are hovered over */
+  }
+  
+  .tab button.active {
+    color: skyblue;
+    /* this sets the tablink to blue when it is the selected tab */
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    background-color: white;
+    height: 500px;
+    border-top: none;
+    margin: auto;
+    overflow-y: auto;
+    animation: fadeEffect 1s;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: black;
+    /* this styles the content of the tabs and includes a fading effect that take 1 second */
+  }
+  .topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    color: black;
+    transition: all 0.3s ease-in-out 0.2s;
+    /* this sets the styling and positioning on the close tab button */
+  }
+  
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    /* this sets the effect of the opening content to go from 0 to full opacity */
+  }
+  
+  .topright:hover {
+    color: red;
+    transition: all 0.3s ease-in-out 0.2s;
+    transform: scale(1.2);
+    /* this sets the hover effect of the close tab button to turn red and increase scale by 1.2 */
+  }
+  .contact_bg{
+    background-image: url("images/contact_final.png");
+    background-size: cover;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top:0;
+    z-index: -999;
+    /* this sets the styling and source of the heading image for the contact page */
+  }
+  .contact_box1{
+    float: left;
+    padding: 10px;
+    background-color: #777;
+    width: 40%;
+    height: 950px;
+    overflow-y: auto;
+    /* this sets the styling and positioning for the first contact box which contains the form */
+  }
+
+  .contact_box2{
+    float: right;
+    padding:10px;
+    background-color: #777;
+    width: 40%;
+    height: 300px;
+    /* this sets the styling and positioning for the second contact box which contains the map */
+  }
+  .map{
+    width: 100%;
+    height: 100%;
+    /* this sets the width and height for the map which is contained within the second contact box */
+  }
+
+  .contact_box3{
+    float: right;
+    padding: 10px;
+    background-color: #777;
+    width: 40%;
+    height: 600px;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* this sets the styling and positioning for the third contact box which contains the chatbot elements */
+  }
+  
+
+#chatbot {
+    background-color: #f5f5f5;
+    border: 1px solid #eef1f5;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 100%;
+    /* this sets the background and dimensions of the white box the chats are shown on top of */
+  }
+  
+
+  message-container {
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* this keeps the send message icon inline with the text input box */
+  }
+  
+  #conversation {
+    height: 480px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* this sets the dimensions for the space the messages actually appear in and dictates how much height they can take up before a scroll bar is implemented */
+  }
+
+  @keyframes message-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* this fades in the messages from opacity 0 to 1 and slides them into view */
+  }
+  
+  .chatbot-message {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    padding: 0 15px;
+    /* this is for the positioning of time the message is sent above the message */
+  }
+
+  .user-message {
+    justify-content: flex-end;
+    /* this is needed to position the users message on the right of the screen otherwise it floats to the left */
+  }
+
+
+.chatbot-text {
+    background-color: white;
+    color: #333333;
+    font-size: 1.1em;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* this sets the styling of the chatbot response text */
+  }
+  
+  
+  #input-field {
+    flex: 1;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #eef1f5;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background: #ffffff;
+    color: #333333;
+    border: none;
+    /* this sets the styling and dimensions of the box where the user inputs the message they want to send to the chatbot */
+  }
+
+  .send-icon {
+    margin-right: 10px;
+    cursor: pointer;
+    /* this sets the submit icon to be next to the input box and sets the cursor to be a pointer */
+  }
+  
+  #input-field:focus {
+    outline: none;
+    /* this removes the blue box that would usually appear when the user is typing in the input box, it is removed for aesthetic reasons */
+  }
+  
+  #submit-button {
+    background-color: transparent;
+    border: none;
+    /* this sets styling for the submit button that the send icon is contained within to look seamless with the input bar, if this code was not here a black box would appear around the button */
+  }
+
+  p[sentTime]:hover::after {    
+    content: attr(sentTime);
+    position: absolute;
+    top: -3px;
+    font-size: 14px;
+    color: gray;
+    /* this sets the time that the message was sent informations styling and positioning */
+  }
+
+  .chatbot p[sentTime]:hover::after {  
+    left: 15px;
+    /* this sets the time that the message was sent information to float left by 15px if it is applied to the chatbot message */
+  }
+
+  .user-message p[sentTime]:hover::after {  
+    right: 15px;
+    /* this sets the time that the message was sent information to float right by 15px if it is applied to the user message */
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* this sets the width of scroll bar that will appear as the conversation dimensions overflow */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* this sets the background colour of the track that the scroll bar will run along as the conversation dimensions overflow */ 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    /* this sets the background colour of the scroll bar that will appear as the conversation dimensions overflow */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* this sets the background colour of the scroll bar that will appear as the conversation dimensions overflow to change on hover */
+  }
+  .speakerssubbox{
+    text-align: center;
+    padding: 10;
+    margin: 0 auto; 
+    background-color: #777;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    /* this sets the styling and positioning for the grey box that the speaker cards are contained within */
+  }
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  /*this floats 4 columns side by side */
+}
+.row {
+  margin: 0 -5px;
+  /* Remove extra left and right margins, that is caused by padding in columns */
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  /* Clear floats after the columns */
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* defines the dropshadow dimensions and colour using rgba properties*/
+  padding: 16px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: auto;
+  color: #000;
+  box-sizing: border-box;
+  /*this styles the speaker cards */
+}
+.card:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  /* this sets the styling for the speaker cards when the user hovers over them*/
+}
+.title {
+  color: grey;
+  font-size: 18px;
+  /* this sets the styling of the title of the cards */
+}
+.speakers_button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out 0.2s;
+  /* this sets the styling of the contact button that is on each of the speakers cards */
+}
+.socials_container{
+  margin: 24px 0;
+  /*this sets it so that the social media icons will display properly on the speaker cards */
+}
+.socials {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  /* this sets the styling of the social media icons that are on each of the speakers profiles */
+}
+.speakers_button:hover{
+  background-color: skyblue;
+  transition: all 0.3s ease-in-out 0.2s;
+  transform: scale(1.15);
+  /* this sets the styling of the contact button so that on hover it increases the scale by 1.15 and changes the background colour */
+}
+.socials:hover{
+  color: skyblue;
+  /* this sets the social media icons to change to blue when they are hovered over */
+}
+.content {
+  margin-top: -20px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  color: #000;
+  /* this sets the styling for the content that pops out when the speaker cards are clicked on */
+  /* this also sets the content to smoothly slide down */
+}
+.content h3{
+  color: #000;
+  /* this sets the colour of the title within the content to black */
+}
+.card_images{
+  width: 100%;
+  /*this sets the width of the images that appear at the top of the speaker cards */
+}
+.speakersbg{
+  background-image: url("images/speakers.jpg");
+  min-width: 100%;
+  position: fixed;
+  height: 100%;
+  top:0;
+  z-index: -999;
+  object-fit: fill;
+  /* this sets the dimensions and source for the header image of the speakers page */
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  /* this hides all navigation links apart from the first one when the screen is <= 600 pixels in width */
+  .topnav a.icon {
+    /* this make the hamburger icon appear in the top right when the screen is <= 600 pixels in width */
+    float: right;
+    display: block;
+  }
+  .topnav a{
+    /* this disables the zoom animations on hover for the navbar when the screen size is below 600pixels as this was found to not work well on this screen size*/
+      transform: none !important;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* this sets the position of the hamburger icon to always stay in the top right */
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    /* this aligns the home button to the left*/ 
+  }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .content_box{
+    height: auto;
+  }
+  .inputbox{
+    width: auto;
+  }
+  .submitbox{
+    width: auto;
+  }
+  /* this sets the cards to display in one column on mobile devices */
+  .bgimg-2, .bgimg-3, .contact_bg,.register_bg,.schedule_bg,.speakersbg {
+    background-attachment: scroll;
+    /* this disables parallax scrolling on mobile devices as it is known to break on them */
+  }
+
+}
+ 

@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- the code above links the css file to the html file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--The code above imports the icon library for the hamburger menu icon-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      function navbar() {
+        
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+          // toggles adding the responsive class to topnav when the user clicks the icon
+        }
+      }
+      function validateForm() {
+        // this sets a function with the name validateForm
+        let fname = document.forms["register_form"]["fname"].value;
+        let lname = document.forms["register_form"]["lname"].value;
+        let age = document.forms["register_form"]["age"].value;
+        let email = document.forms["register_form"]["email"].value;
+        let phone = document.forms["register_form"]["phone number"].value;
+        let cardnum = document.forms["register_form"]["cardnum"].value;
+        let ccv = document.forms["register_form"]["ccv"].value;
+        // the code above assigns a varaiable to each input box on the form
+
+        switch (true){
+          //I already had a basic idea on how switch statements worked but got more information about them here: https://www.w3schools.com/js/js_switch.asp
+        // a switch statement was used here instead of an if else tree, this is because not only are switch statements more readable than if else trees they are also more performant due to their use of jump tables
+          case fname == "":
+            document.getElementsByName('fname')[0].placeholder='must be filled out';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            // this stops the form from being submitted
+            break;
+            // this breaks out of the switch statement and stops it from flowing into the next case
+
+          case fname.length < 2:
+            document.getElementsByName('fname')[0].value='';
+            document.getElementsByName('fname')[0].placeholder='first name cannot be < 2';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input is < 2 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case fname.length > 15:
+            document.getElementsByName('fname')[0].value='';
+            document.getElementsByName('fname')[0].placeholder='cannot be > 15';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input is < 15 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case /\d/.test(fname):
+            document.getElementsByName('fname')[0].value='';
+            document.getElementsByName('fname')[0].placeholder='cannot contain numbers';
+            document.getElementById("fname").style.borderColor = "red";
+            document.getElementById("fname").style.borderWidth = "thin";
+            // the code above checks if the first name input contains a number and if it does it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case lname == "":
+            document.getElementsByName('lname')[0].placeholder='last name must be filled out';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the last name input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case /\d/.test(lname):
+            document.getElementsByName('lname')[0].value='';
+            document.getElementsByName('lname')[0].placeholder='cannot contain numbers';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the last name input contains a number and if it does it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+
+          case lname.length < 5:
+            document.getElementsByName('lname')[0].value='';
+            document.getElementsByName('lname')[0].placeholder='cannot be < 5';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the first name input is < 5 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case lname.length > 20:
+            document.getElementsByName('lname')[0].value='';
+            document.getElementsByName('lname')[0].placeholder='cannot be < 20';
+            document.getElementById("lname").style.borderColor = "red";
+            document.getElementById("lname").style.borderWidth = "thin";
+            // the code above checks if the first name input is > 20 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case age == "":
+            document.getElementsByName('age')[0].placeholder='age must be filled out';
+            document.getElementById("age").style.borderColor = "red";
+            document.getElementById("age").style.borderWidth = "thin";
+            // the code above checks if the age input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case age <=17:
+            document.getElementsByName('age')[0].value='';
+            document.getElementsByName('age')[0].placeholder='must be 18 or older';
+            document.getElementById("age").style.borderColor = "red";
+            document.getElementById("age").style.borderWidth = "thin";
+            // the code above checks if the age input is <= 17 and if it is it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case age >= 120:
+            document.getElementsByName('age')[0].value='';
+            document.getElementsByName('age')[0].placeholder='age cannot exceed 120';
+            document.getElementById("age").style.borderColor = "red";
+            document.getElementById("age").style.borderWidth = "thin";
+            return false;
+            break;
+            // the code above checks if the age input is >= 120 and if it is it wipes the current input, changes the placeholder and changes the border of the input box to red
+    
+          case email == "":
+            document.getElementsByName('email')[0].placeholder='must be filled out';
+            document.getElementById("email").style.borderColor = "red";
+            document.getElementById("email").style.borderWidth = "thin";
+            // the code above checks if the email input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case !email.includes('@'):
+            document.getElementsByName('email')[0].value='';
+            document.getElementsByName('email')[0].placeholder='must include an @';
+            document.getElementById("email").style.borderColor = "red";
+            document.getElementById("email").style.borderWidth = "thin";
+            // the code above checks to make sure that the email input doesn't contain an @ and if it does it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;   
+
+          case phone == "":
+            document.getElementsByName('phone number')[0].value='';
+            document.getElementsByName('phone number')[0].placeholder='must be filled out';
+            document.getElementById("phone number").style.borderColor = "red";
+            document.getElementById("phone number").style.borderWidth = "thin";
+            // the code above checks if the phone number input is empty and if it is it changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case phone.length < 10 || phone.length > 10:
+            document.getElementsByName('phone number')[0].value='';
+            document.getElementsByName('phone number')[0].placeholder='must be 10 numbers long';
+            document.getElementById("phone number").style.borderColor = "red";
+            document.getElementById("phone number").style.borderWidth = "thin";
+            // the code above checks if the phone number input is exactly 11 digits long  and if it isn't it wipes the current input and changes the placeholder and changes the border of the input box to red
+            return false;
+            break;
+
+          case cardnum == "":
+            document.getElementsByName('cardnum')[0].placeholder='must be filled out';
+            document.getElementById("cardnum").style.borderColor = "red";
+            document.getElementById("cardnum").style.borderWidth = "thin";
+            // this code checks to see if the card number element value is "" and if it is it notifies the user of such and stops form submission
+            return false;
+            break;
+    
+          case cardnum.length > 19:
+            document.getElementsByName('cardnum')[0].value=''
+            document.getElementsByName('cardnum')[0].placeholder='card number cannot be more than 19 digits';
+            document.getElementById("cardnum").style.borderColor = "red";
+            document.getElementById("cardnum").style.borderWidth = "thin";
+            // this code checks if the card number element value exceeds 19 and if it does it notifies the user of such and stops form submission
+            return false;
+            break;
+    
+          case cardnum.length < 16:
+            document.getElementsByName('cardnum')[0].value=''
+            document.getElementsByName('cardnum')[0].placeholder='card number cannot be less than 16 digits';
+            document.getElementById("cardnum").style.borderColor = "red";
+            document.getElementById("cardnum").style.borderWidth = "thin";
+            // this code checks if the card number element value is less than 16 and if it is it notifies the user of such and stops form submission
+            return false;
+            break;
+    
+          case ccv == "":
+            document.getElementsByName('ccv')[0].placeholder='ccv must be filled out';
+            document.getElementById("ccv").style.borderColor = "red";
+            document.getElementById("ccv").style.borderWidth = "thin";
+            // this code checks if the ccv element value is "" and if it is it notifies the user of such and stops form submission
+            return false;
+            break;
+
+          case ccv.length < 3 || ccv.length > 3:
+            document.getElementsByName('ccv')[0].value=''
+            document.getElementsByName('ccv')[0].placeholder='ccv must be 3 digits long';
+            document.getElementById("ccv").style.borderColor = "red";
+            document.getElementById("ccv").style.borderWidth = "thin";
+            // this code checks if the ccv element value is more than or less than 3 and if it is notifies the user of such and stops form submission
+            return false;
+            break;
+        }
+      }
+    </script>
+    <title>TechCon2023 Registry</title>
+    <!--sets the title for the webpage that will appear in the tab-->
+        
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+    <!-- This sets the favicon for the page-->
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+    <!--Class declared for navigation and links declared below-->
+      <div class="navtext">
+        <a href="index.html">Home</a>
+        <a href="register.html" class="active">Register</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="contact_us.html">Contact us</a>
+        <!--This contains the text for the navbar and the locations the user will be redirected to on click-->
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="navbar()">
+        <i class="fa fa-bars"></i>
+        <!--Calls the specific icon for the hamburger menu from the icon library-->
+      </a>
+    </div>
+    
+    <div class="parallaxcontainer">
+    <!--sets the parallax container element which contains styling required to cause the parallax effect-->
+      <div class="register_bg">
+        <!-- sets the background image of the top header-->
+      </div>
+    </div>
+    <div class="content_box">
+    <!-- this element is the grey box that is directly below the parallax image and what the form is contained within-->
+      <h3>Register</h3>
+      <!-- this sets a heading for the register form-->
+        <div class="form_container">
+          <!--This div is needed to contain the form so it can be aligned to the centre-->
+          <form name="register_form" onsubmit="return validateForm()" >
+            <!--this names the form and returns the result of the function validateForm() when the submit button is pressed-->
+            <br><label class = "label" for="fname">First name<sup>*</sup></label><br><br>
+            <input type="text" name="fname" id="fname" class="inputbox"><br><br>
+            <!-- this sets a label and input for the first name input on the form-->
+            <label for="lname" class = "label">Last name<sup>*</sup></label><br><br>
+            <input type="text" name="lname" id="lname" class="inputbox"><br><br>
+            <!-- this sets a label and input for the last name input on the form-->
+            <label for="age" class = "label">Age<sup>*</sup></label><br><br>
+            <input type="number" name="age" id="age" class="inputbox"><br><br>
+            <!-- this sets a label and input for the age input on the form-->
+            <label for="email" class = "label">Email<sup>*</sup></label><br><br>
+            <input type="text" name="email" id="email" class="inputbox"><br><br>
+            <!--instead of the email type we are using text here instead since we are using javascript validation over automatic browser verification -->
+            <label for="phone number" class = "label">Phone Number<sup>*</sup></label><br><br>
+            <input type="number" name="phone number" id="phone number" class="inputbox"><br><br>
+            <!-- instead of the tel type we are using number here since we are not using automatic browser based validation-->
+            <label for="cardnum" class = "label">Card Number<sup>*</sup></label><br><br>
+            <input type="number" name="cardnum" id="cardnum" class="inputbox"><br><br>
+            <!--this creates an input box and label for the card number input-->
+            <label for="ccv" class = "label">CCV<sup>*</sup></label><br><br>
+            <input type="number" name="ccv" id="ccv" class="inputbox"><br><br>
+            <!--this creates an input box and label for the ccv input-->
+            <input type="checkbox" name="email_marketing" value="yes">
+            <label for="email_marketing" class = "label">Would you like to receive emails from us on future events?</label><br><br>
+            <!-- this sets the checkbox for email marketing notifications (not actually linked to anything)-->
+            <input type="checkbox" name="phone_marketing" value="yes">
+            <label for="phone_marketing" class = "label">Would you like to receive SMS communication from us on future events?</label><br><br>
+            <!-- this sets the checkbox for sms marketing notifications(also not actually linked to anything)-->
+            <input type="submit" value="Submit" class="submitbox">
+            <!-- this sets a submit button for the form to appear on the page-->
+          </form>
+        </div>
+    </div>
+
+    <div class="box2">
+      <p class="footertext"><a href="#top" class="backtotop">Back to top of page</a><br><br>&copy; Tech Con 2023 <br>
+      all rights reserved<br></p>
+      <!--this is the standard footer code which is used throughout this website-->
+    </div>  
+  </body>
+</html>
